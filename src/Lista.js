@@ -25,26 +25,11 @@ const Lista = () => {
         <div>
             <h1>Moje Leki</h1>
             <div className="input-group">
-                <input
-                    type="text"
-                    placeholder="Name"
-                    value={newLek}
-                    onChange={(e) => setNewLek(e.target.value)}
-                />
+                <input type="text" placeholder="Name" value={newLek} onChange={(e) => setNewLek(e.target.value)}/>
                 <Validator text={newLek} minLength={3}/>
-                <input
-                    type="text"
-                    placeholder="Description"
-                    value={opis}
-                    onChange={(e) => setOpis(e.target.value)}
-                />
+                <input type="text" placeholder="Description" value={opis} onChange={(e) => setOpis(e.target.value)}/>
                 <Validator text={opis} minLength={3}/>
-                <input
-                    type="text"
-                    placeholder="Dose"
-                    value={dawka}
-                    onChange={(e) => setDawka(e.target.value)}
-                />
+                <input type="text" placeholder="Dose" value={dawka} onChange={(e) => setDawka(e.target.value)}/>
                 <Validator text={dawka} minLength={3}/>
             </div>
             <button onClick={dodajLek}>Add Item</button>

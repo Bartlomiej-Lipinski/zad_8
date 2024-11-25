@@ -1,5 +1,4 @@
 import React from 'react';
-// import './Validator.css';
 
 const Validator = ({ text, minLength }) => {
     return (
