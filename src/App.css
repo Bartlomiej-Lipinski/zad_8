@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+body, h1, h2, h3, p, ul, li, a, input, label, button {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #028a74;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 20px;
+}
+h1, h2, h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 25px;
+  right: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  color: #7e2424;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+input, textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #7e2424;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: horizontal;
+  background-color: #0b3a33;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background-color: #7e2424;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #ff0000;
 }
