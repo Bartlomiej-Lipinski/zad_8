@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-import ListItem from './ListItem';
+import ListaLek from './ListaLek';
 import './App.css';
-import Validator from "./Validation";
-const List = () => {
+import Validator from "./Component/Validation";
+const Lista = () => {
     const [Leki, setLeki] = useState([]);
     const [newLek, setNewLek] = useState('');
-    const [description, setDescription] = useState('');
-    const [dose, setDose] = useState('');
+    const [opis, setOpis] = useState('');
+    const [dawka, setDawka] = useState('');
 
-    const addItem = () => {
+    const dodajLek = () => {
         if (newLek.trim().length >= 3) {
-            setLeki([...Leki, { id: Date.now(), text: newLek, description: description, dose: dose }]);
+            setLeki([...Leki, { id: Date.now(), nazwa: newLek, opis: opis, dawka: dawka }]);
             setNewLek('');
-            setDescription('');
-            setDose('');
+            setOpis('');
+            setDawka('');
         }
     };
 
-    const removeItem = (id) => {
+    const UsunLek = (id) => {
         setLeki(Leki.filter(item => item.id !== id));
     };
 
@@ -35,26 +35,26 @@ const List = () => {
                 <input
                     type="text"
                     placeholder="Description"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
+                    value={opis}
+                    onChange={(e) => setOpis(e.target.value)}
                 />
-                <Validator text={description} minLength={3}/>
+                <Validator text={opis} minLength={3}/>
                 <input
                     type="text"
                     placeholder="Dose"
-                    value={dose}
-                    onChange={(e) => setDose(e.target.value)}
+                    value={dawka}
+                    onChange={(e) => setDawka(e.target.value)}
                 />
-                <Validator text={dose} minLength={3}/>
+                <Validator text={dawka} minLength={3}/>
             </div>
-            <button onClick={addItem}>Add Item</button>
+            <button onClick={dodajLek}>Add Item</button>
             <ul>
                 {Leki.map((item) => (
-                    <ListItem key={item.id} lek={item} onRemove={removeItem}/>
+                    <ListaLek key={item.id} lek={item} usun={UsunLek}/>
                 ))}
             </ul>
         </div>
     );
 };
 
-export default List;
+export default Lista;

@@ -1,12 +1,11 @@
 import React from 'react';
-import List from './List';
+import Lista from './Lista';
 
 function App() {
   return (
       <div>
-        <List />
+        <Lista />
       </div>
   );
 }
-
 export default App;
