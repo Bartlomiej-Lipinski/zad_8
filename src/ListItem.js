@@ -1,13 +1,13 @@
 import React from 'react';
 import './ListItem.css';
 
-const ListItem = ({ item, onRemove }) => {
+const ListItem = ({ lek, onRemove }) => {
     return (
         <li className="list-item">
-            <p>{item.text}</p>
-            <button className="remove-button" onClick={() => onRemove(item.id)}>
-                Remove
-            </button>
+            <p>{lek.text}</p>
+            <p>{lek.description}</p>
+            <p>{lek.dose}</p>
+            <button className="remove-button" onClick={() => onRemove(lek.id)}>Remove</button>
         </li>
     );
 };
